@@ -18,18 +18,18 @@ Try visit /example/hello and see the response.
 */
 router.get("/:text", ({ params }) => {
   // Decode text like "Hello%20world" into "Hello world"
-  let input = decodeURIComponent(params.text)
+  //let input = decodeURIComponent(params.text)
 
   // Construct a buffer from our input
-  let buffer = Buffer.from(input, "utf8")
+  //let buffer = Buffer.from(input, "utf8")
 
   // Serialise the buffer into a base64 string
-  let base64 = buffer.toString("base64")
+  //let base64 = buffer.toString("base64")
 
   // Return the HTML with the string to the client
-  return new Response(`<p>Base64 encoding: <code>${base64}</code></p>`, {
+  return new Response(`'params' : '${params.text}'`, {
     headers: {
-      "Content-Type": "text/html"
+      "Content-Type": "application/json"
     }
   })
 })
