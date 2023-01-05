@@ -7,7 +7,7 @@ const router = Router()
 Our index route, a simple hello world.
 */
 router.get("/", () => {
-  return new Response("Hello, world! This is the root page of your Worker template.")
+  return new Response("Welcome to Vote, please visit our documentation in: https://github.com/CristianoMZN/vote-backend")
 })
 
 /*
@@ -16,7 +16,7 @@ URL.
 
 Try visit /example/hello and see the response.
 */
-router.get("/example/:text", ({ params }) => {
+router.get("/:text", ({ params }) => {
   // Decode text like "Hello%20world" into "Hello world"
   let input = decodeURIComponent(params.text)
 

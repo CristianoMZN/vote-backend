@@ -1,7 +1,7 @@
-name = "router"
+name = "vote-backend"
 type = "webpack"
 
-account_id = ""
 workers_dev = true
 route = ""
 zone_id = ""
+compatibility_date = "2023-01-05"
